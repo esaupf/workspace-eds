@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="css/appbank.css" type="text/css" media="screen" title="Stylesheet" />
+</head>
+<body>
+	<wicket:extend>
+		<form wicket:id="form" method="post">
+			<table cellspacing="0" cellpadding="0" class="conteudo">
+				<tr class="fundoPadraoAEscuro3">
+					<th colspan="0" class="thform"><span wicket:id="lblTitulo">Detalhe da Conta</span></th>
+				</tr>
+				<tr class="fundoPadraoAClaro2">
+					<td class="portlet-coluna">
+						<table cellpadding="0" cellspacing="0" class="tabela">
+							<tr>
+								<td class="alinhamento-direita">Agência :</td>
+           						<td>
+          							<input maxlength="4" size="4" wicket:id="edtAgencia" tabindex="1" title="Entre com o número da agência"/>
+           						</td>
+           						<td class="alinhamento-direita">Conta :</td>
+           						<td>
+           							<input maxlength="7" size="7" wicket:id="edtConta" tabindex="2" title="Entre com o número da conta"/>
+           						</td>
+           						<td class="alinhamento-direita"></td>
+           						<td>
+           							<input wicket:id="btnConsultar" type="submit" class="botao" value="Consultar" tabindex="3" title="Submete Pesquisa"/>
+           						</td>
+  							</tr>
+  						</table>
+  					</td>
+       			</tr>
+			</table>
+			<wicket:child/>
+		</form>
+	</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="css/appbank.css" type="text/css" media="screen" title="Stylesheet" />
+</head>
+<body>
+	<wicket:extend>
+		<form wicket:id="form" method="post">
+			<table cellspacing="0" cellpadding="0" class="conteudo">
+				<tr class="fundoPadraoAEscuro3">
+					<th colspan="0" class="thform"><span>Consulta Transações</span></th>
+				</tr>
+				<tr class="fundoPadraoAClaro2">
+					<td class="portlet-coluna">
+						<table cellpadding="0" cellspacing="0" class="tabela">
+							<tr>
+								<td class="alinhamento-direita">Data de Referência: </td>
+           						<td>
+          							<input maxlength="10" size="10" wicket:id="edtDataDeReferencia" tabindex="1" title="Entre com a data de referência"/>
+           						</td>
+           						<td class="alinhamento-direita"></td>
+           						<td>
+           							<input wicket:id="btnConsultar" type="submit" class="botao" value="Consultar" tabindex="2" title="Submete Pesquisa"/>
+           						</td>
+  							</tr>
+  						</table>
+  					</td>
+       			</tr>
+			</table>
+			<table cellspacing="0" cellpadding="0" class="resultado-pesquisa">
+    			<tr class="fundoPadraoAEscuro3">
+					<th class="thform" colspan="7">Transações do Dia</th>
+        		</tr>
+      			<tr class="titulo-coluna">
+        			<td scope="col" class="wicket_coluna titulo-coluna-data">Data</td>
+      				<td scope="col" class="wicket_coluna">Tipo</td>
+        			<td scope="col" class="wicket_coluna">Descrição</td>
+        			<td scope="col" class="wicket_coluna">Agência</td>
+        			<td scope="col" class="wicket_coluna">Conta</td>
+        			<td scope="col" class="wicket_coluna">Valor</td>
+        			<td scope="col" class="wicket_coluna">Identificador</td>
+       			</tr>
+  				<tr wicket:id="lstTransacoes">
+        			<td wicket:id="lblDataHoraTransacao" class="centralizado">18/09/1975 01:02:59</td>
+  					<td>	
+  						<img src="imagens/credito.gif" alt="Crédito/Débito" wicket:id="imgTipoDoLancamento"/>
+  					</td>
+  					<td wicket:id="lblDescricao">Saque em conta</td>
+          			<td wicket:id="lblAgencia">0001</td>
+          			<td wicket:id="lblConta">000002</td>
+          			<td wicket:id="lblValor">890,00</td>
+          			<td wicket:id="lblIdDaTransacao">42941d60-5132-48db-b12f-246093eb68ef</td>
+  				</tr>
+			</table>
+		</form>
+	</wicket:extend>
+</body>
+</html>

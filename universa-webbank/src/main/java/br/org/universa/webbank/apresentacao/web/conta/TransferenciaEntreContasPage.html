@@ -1,0 +1,43 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="css/appbank.css" type="text/css" media="screen"
+	title="Stylesheet" />
+</head>
+<wicket:extend>
+	<table cellspacing="0" cellpadding="0" class="conteudo">
+		<tr class="fundoPadraoAEscuro3">
+			<th colspan="0" class="thform">Conta Favorecida</th>
+		</tr>
+		<tr class="fundoPadraoAClaro2">
+			<td class="portlet-coluna">
+				<table cellpadding="0" cellspacing="0" class="tabela">
+					<tr>
+						<td class="alinhamento-direita">Agência Favorecida :</td>
+            			<td>
+            				<input maxlength="4" size="4" wicket:id="edtAgenciaFavorecida" tabindex="3" title="Entre com o número da agência"/>
+            			</td>
+  					</tr>
+  					<tr>
+  						<td class="alinhamento-direita">Conta Favorecida :</td>
+            			<td>
+            				<input maxlength="7" size="7" wicket:id="edtContaFavorecida" tabindex="4" title="Entre com o número da conta"/>
+            			</td>
+  					</tr>
+  					<tr>
+						<td class="alinhamento-direita">Valor a transferir :</td>
+						<td><input maxlength="8" size="8" wicket:id="edtValor" tabindex="5" title="Entre com o valor a transferir" /></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr class="barra-acao">
+        	<td>
+		 		<div class="barra-acao-centralizado">
+		 			<input wicket:id="btnTransferir" type="submit" class="botao" value="Transferir" tabindex="6" title="Transferir"/>
+		 		</div>
+		 	</td>
+      	</tr>
+	</table>
+</wicket:extend>
+</html>

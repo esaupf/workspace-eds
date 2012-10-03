@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>App Web - Wicket</title>
+		<link rel="stylesheet" href="css/appbank.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+		<div id="cabecalho">
+			<div id="logo">
+				<img src="imagens/universa_logo.png" width="100px" height="55px" alt="Universa Logo" />
+				<h1 wicket:id="lblNomeDaAplicacao">Universa - WebBank</h1>
+			</div>
+		</div>
+		<div id="menu">
+			<p><a href="#" wicket:id="lnkSaldoDaConta">Saldo da Conta</a></p>
+			<p><a href="#" wicket:id="lnkExtratoDaConta">Extrato da Conta</a></p>
+			<p><a href="#" wicket:id="lnkSaqueEmConta">Saque em Conta</a></p>
+			<p><a href="#" wicket:id="lnkDepositoEmConta">Deposito em Conta</a></p>
+			<p><a href="#" wicket:id="lnkTransferenciaEntreContas">Transferência entre Contas</a></p>
+			<p><a href="#" wicket:id="lnkInvestimentoEmFundos">Investimento em Fundos</a></p>
+			<p><a href="#" wicket:id="lnkRealizaDocTed">Realiza DOC/TED</a></p>
+			<p><a href="#" wicket:id="lnkConsultaTransacoes">Consulta Transações</a></p>
+		</div>
+		<div id="corpo">
+			<div align="center">
+  				<span wicket:id="fbmMensagem">Mensagens (erros, etc) - depende da operação</span>
+			</div> 
+			<wicket:child>
+			</wicket:child>
+		</div>
+		<div id="rodape">
+		</div>
+	</body>
+</html>

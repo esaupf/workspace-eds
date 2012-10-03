@@ -1,0 +1,179 @@
+body {font-family:verdana; font-size:85%;}
+p, li, a { font-family: georgia, times, serif;font-size:13pt;}
+h1, h2, h3 { font-family: 'Yanone Kaffeesatz', arial, serif; }
+body { margin:0;padding:0;}
+#cabecalho {
+	width : 100%;
+	height : 87px;
+	background-color : #092E67;
+	margin-top : 0;
+	padding-top : 10px;
+	border-bottom : 1px solid #888;
+	z-index : 0;
+}
+
+#rodape {
+	position : absolute;
+	bottom : 0;
+	width : 100%;
+	height : 99px;
+	background-color : #6493D2;
+	border-top : 1px solid #888;
+	z-index : 0;
+}
+
+#logo,#corpo {
+	width : 650px;
+	margin: 0 auto;
+	padding: 25px 50px 0 50px;
+}
+
+#logo h1 {
+	color : white;
+	font-size:36pt;
+	display: inline;
+}
+
+#logo img { 
+	display:inline;
+	vertical-align: bottom;
+	margin-left : 50px;
+	margin-right : 5px;
+}
+
+body { margin-top : 0; padding-top : 0;}
+#logo, #logo h1 { margin-top : 0; padding-top : 0;}
+#corpo {
+	position : absolute;
+	top : 75px;
+	bottom : 75px;
+	left : 50%;
+	margin-left : -325px;
+	z-index : 1;
+	overflow: auto;
+	background-color : #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 0px 0px 10px #888;
+	-webkit-box-shadow: 0px 0px 10px #888;
+	box-shadow: 0px 0px 10px #888;
+}
+
+#menu {
+	position : absolute;
+	top : 150px;
+	left : 50px;
+	width : 300px;
+	height : 500px;
+	z-index : 0;
+	overflow: auto;
+}
+
+a, a:visited, a:hover, a:active {
+	color : #6493D2;
+}
+h2 {
+	padding : 0; margin:0;
+	font-size:36pt;
+	color:#FF5500;
+}
+h3 {
+	padding : 0; margin:0;
+	font-size:24pt;
+	color:#092E67;
+}
+
+.conteudo,.resultado-pesquisa {
+	width:100%;
+}
+.resultado-pesquisa td {
+	margin:0px;
+	/* Mozilla */
+	padding:3px 3px 2px 6px;
+	/* IE*/
+	_padding:2px 3px 2px 6px;
+	font-size:0.8em;
+	border-bottom:1px solid #F2F2F2;
+}
+
+.conteudo td {padding:3px;}	
+.conteudo a {border:1px solid #CCC; padding:3px 6px 3px 3px; position:relative;}
+.conteudo a:hover {border:1px solid #A2B6F1; background-color:#F1F1F1;}
+
+.tabela{border:0px; empty-cells:show;}
+.portlet-coluna-esquerda-interna {width:50%;}
+.portlet-coluna {width:1%}
+.botao {/*background-color: #e5e9ed;*/border:1px solid #CCC; padding:3px 6px 3px 6px; font-size:0.9em; background-color:#E9E9E9; font-size:11px}
+
+.fundoPadraoAClaro2 {background-color: #FFF/*#e5e9ed*/; color: #636563; font-size:12px}
+.fundoPadraoAEscuro3{background-color:#e0e0e0/*#4a73a2*/; color: #000/*#fff;*/; font-size:12px}
+
+th.thform{border-bottom:1px solid #fff; padding:6px 5px 6px 5px/* border-top:1px solid #fff;*/}
+th.thform-ajustado{width:1%; border-bottom:1px solid #fff; padding:6px 5px 6px 5px}
+
+.alinhamento-direita {text-align:right;}
+
+.centralizado{text-align:center}
+
+.wicket_coluna {
+	white-space: nowrap; 
+	height: 15px /*21px*/;
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-image: url("../images/ativarA.png");
+	padding-right: 15px;
+	font-size:11px
+}
+
+.titulo-coluna {
+	background-color:#f5f5f5;
+	/* Mozilla */
+	height:20px;
+	/* IE */
+	_height:15px;
+
+	text-align:left;
+	font-size:1em; color: #666666;
+}
+
+.titulo-coluna-data {
+	text-align:center;
+}
+
+.titulo-coluna-valor {
+	text-align:right;
+}
+
+.barra-acao {
+	/* Mozilla */
+	height:30px;
+	/* IE */
+	_height:22px;
+}
+
+.barra-acao td {
+	background-color:#E9E9E9; border:none;
+	padding:5px;
+}
+
+.barra-acao-direita {
+	position:static;
+	float:right;
+	text-align:right;
+	padding:5px;
+}
+
+.barra-acao-esquerda {
+	position:static;
+	float:left;
+	padding:5px;
+}
+
+.barra-acao-centralizado {
+	text-align:center;
+}
+
+.msgErro{text-align:center; color:#FF0000; font-size:13px}
+
+.msgInfo{text-align:center; color:#000; font-size:13px}

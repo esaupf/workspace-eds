@@ -1,0 +1,36 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="css/appbank.css" type="text/css" media="screen" title="Stylesheet" />
+</head>
+<wicket:extend>
+	<table cellspacing="0" cellpadding="0" class="conteudo">
+		<tr class="fundoPadraoAEscuro3">
+			<th colspan="0" class="thform">Dados da Conta</th>
+       	</tr>
+        <tr class="fundoPadraoAClaro2">
+  			<td class="portlet-coluna">
+  				<table cellpadding="0" cellspacing="0" class="tabela">
+  					<tr>
+        				<td class="alinhamento-direita">Agência</td>
+        				<td><span wicket:id="lblAgencia"></span></td>
+        			</tr>
+        			<tr>
+        				<td class="alinhamento-direita">Conta</td>
+        				<td><span wicket:id="lblConta"></span></td>
+        			</tr>
+        			<tr>
+        				<td class="alinhamento-direita">Cliente</td>
+        				<td><span wicket:id="lblCliente"></span></td>
+        			</tr>
+        			<tr>
+        				<td class="alinhamento-direita">Saldo Disponível</td>
+            			<td><span wicket:id="lblSaldoDisponivel"></span></td>
+            		</tr>
+  				</table>
+  			</td>
+         </tr>
+	</table>
+	<wicket:child/>
+</wicket:extend>
+</html>

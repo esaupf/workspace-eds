@@ -1,0 +1,29 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="css/appbank.css" type="text/css" media="screen" title="Stylesheet" />
+</head>
+<wicket:extend>
+	<table cellspacing="0" cellpadding="0" class="resultado-pesquisa">
+    	<tr class="fundoPadraoAEscuro3">
+			<th class="thform" colspan="5">Lançamentos da Conta</th>
+        </tr>
+      	<tr class="titulo-coluna">
+        	<td scope="col" class="wicket_coluna titulo-coluna-data">Data</td>
+      		<td scope="col" class="wicket_coluna">Tipo</td>
+        	<td scope="col" class="wicket_coluna">Descrição</td>
+        	<td scope="col" class="wicket_coluna">Valor</td>
+        	<td scope="col" class="wicket_coluna">Saldo</td>
+        </tr>
+  		<tr wicket:id="lstLancamentosDaConta">
+        	<td wicket:id="lblDataDoLancamento" class="centralizado">18/09/1975</td>
+  			<td>	
+  				<img src="imagens/credito.gif" alt="Crédito/Débito" wicket:id="imgTipoDoLancamento"/>
+  			</td>
+  			<td wicket:id="lblDescricao">Saque em conta</td>
+          	<td wicket:id="lblValor">890,00</td>
+          	<td wicket:id="lblSaldo">1.890,00</td>
+  		</tr>
+	</table>
+</wicket:extend>
+</html>
