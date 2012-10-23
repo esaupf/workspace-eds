@@ -782,8 +782,7 @@ public class AbstractTransacaoMediatorTest {
 	private TransacaoDeTransferencia criaTransacaoDeTransferencia(double valor) {
 		TransacaoDeTransferencia transacao = new TransacaoDeTransferencia();
 		transacao.setCanalDeAtendimento(CanalDeAtendimento.INTERNET_BANKING);
-		transacao
-				.setTipoDaTransacao(TipoDaTransacao.TRANSFERENCIA_ENTRE_CONTAS);
+		transacao.setTipoDaTransacao(TipoDaTransacao.TRANSFERENCIA_ENTRE_CONTAS);
 		transacao.setAgencia(3);
 		transacao.setConta(3);
 		transacao.setValor(valor);
