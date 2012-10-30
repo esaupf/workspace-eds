@@ -9,7 +9,6 @@ public class Moderado implements FundoDeInvestimento {
 		} else {
 			return valor * 0.015;
 		}
-
 	}
 
 }

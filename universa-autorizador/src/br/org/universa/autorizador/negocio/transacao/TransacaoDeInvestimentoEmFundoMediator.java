@@ -2,10 +2,9 @@ package br.org.universa.autorizador.negocio.transacao;
 
 import br.org.universa.autorizador.negocio.conta.Conta;
 import br.org.universa.autorizador.negocio.conta.ContaMediator;
+import br.org.universa.autorizador.negocio.conta.LancamentoDaConta;
+import br.org.universa.autorizador.negocio.conta.TipoDoLancamento;
 import br.org.universa.autorizador.negocio.fundos.FundoDeInvestimentoMediator;
-import br.org.universa.autorizador.negocio.transacao.AbstractTransacaoMediator;
-import br.org.universa.autorizador.negocio.transacao.Transacao;
-import br.org.universa.autorizador.negocio.transacao.TransacaoDeInvestimentoEmFundo;
 
 public class TransacaoDeInvestimentoEmFundoMediator extends
 		AbstractTransacaoMediator {
@@ -24,12 +23,28 @@ public class TransacaoDeInvestimentoEmFundoMediator extends
 				.calculaRentabilidade(
 						transacaoDeInvestimentoEmFundo.getTipoDoFundo(),
 						transacao.getValor());
-		
+
 		conta.credita(transacao.getValor() + rentabilidadeLiquida);
 
-		// gera lancamento na conta
+		gerarLancamento(transacaoDeInvestimentoEmFundo, conta,
+				rentabilidadeLiquida);
 
+		// gera lançamento na conta
 		ContaMediator.get().atualiza(conta);
 
 	}
+
+	private void gerarLancamento(TransacaoDeInvestimentoEmFundo transacao,
+			Conta conta, double rentabilidade) {
+
+		LancamentoDaConta lancamento = new LancamentoDaConta(
+				TipoDoLancamento.CREDITO, transacao.getTipoDaTransacao()
+						.getValor()
+						+ " "
+						+ transacao.getTipoDoFundo().getValor(), rentabilidade);
+		
+		conta.adicionaLancamentoDaConta(lancamento);
+
+	}
+
 }

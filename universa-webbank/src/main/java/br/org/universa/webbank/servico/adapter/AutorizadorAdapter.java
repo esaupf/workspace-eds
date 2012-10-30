@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import br.org.universa.autorizador.negocio.conta.Conta;
 import br.org.universa.autorizador.negocio.fundos.TipoDoFundo;
 import br.org.universa.autorizador.negocio.transacao.Transacao;
 import br.org.universa.autorizador.servico.AutorizadorFacade;
@@ -30,8 +31,16 @@ public class AutorizadorAdapter {
 
 	public ContaVO consultaConta(Integer agencia, Integer numero)
 			throws Exception {
-		// TODO - Implementar
-		return null;
+		Conta conta = AutorizadorFacade.get().consultaConta(agencia, numero);
+		
+		ContaVO contaVO = new ContaVO();
+		contaVO.setAgencia(conta.getAgencia());
+		contaVO.setCpfDoTitular(conta.getTitular().getCpf());
+		contaVO.setNumero(conta.getNumero());
+		contaVO.setSaldo(new BigDecimal(conta.getSaldo()));
+		contaVO.setTitular(conta.getTitular().getNome());
+		
+		return contaVO;
 	}
 
 	public ComprovanteVO deposita(ContaVO conta, BigDecimal valor)
@@ -69,8 +78,8 @@ public class AutorizadorAdapter {
 	public List<TransacaoVO> consultaTransacoes(Date dataDeReferencia) {
 		List<TransacaoVO> transacoesDoDia = new ArrayList<TransacaoVO>();
 
-		List<Transacao> transacoes = AutorizadorFacade.get()
-				.consultaTransacoes(dataDeReferencia);
+		List<Transacao> transacoes = null; //AutorizadorFacade.get()
+				//.consultaTransacoes(dataDeReferencia);
 
 		for (Transacao transacao : transacoes) {
 			TransacaoVO transacaoVO = new TransacaoVO();

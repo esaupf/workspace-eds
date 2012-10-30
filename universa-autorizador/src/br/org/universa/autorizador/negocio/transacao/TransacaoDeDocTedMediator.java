@@ -6,7 +6,7 @@ import br.org.universa.autorizador.negocio.conta.ContaMediator;
 public class TransacaoDeDocTedMediator extends AbstractTransacaoMediator {
 
 	@Override
-	protected void executaRegrasEspecificas(Transacao transacao) {
+	protected void executaRegrasEspecificas(Transacao transacao) throws Exception {
 		Conta conta = ContaMediator.get().consultaConta(transacao.getAgencia(),
 				transacao.getConta());
 

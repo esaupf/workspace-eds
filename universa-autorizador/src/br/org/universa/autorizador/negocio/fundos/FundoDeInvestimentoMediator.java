@@ -3,9 +3,11 @@ package br.org.universa.autorizador.negocio.fundos;
 import br.org.universa.autorizador.negocio.fundos.TipoDoFundo;
 
 public class FundoDeInvestimentoMediator {
+
 	private static FundoDeInvestimentoMediator instancia = null;
 
 	private FundoDeInvestimentoMediator() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public static FundoDeInvestimentoMediator get() {
@@ -13,13 +15,13 @@ public class FundoDeInvestimentoMediator {
 			instancia = new FundoDeInvestimentoMediator();
 		}
 		return instancia;
-
 	}
 
 	public double calculaRentabilidade(TipoDoFundo tipoDoFundo, double valor) {
 		double RENTABILIDADE_LIQUIDA = 0.75;
-		FundoDeInvestimento fundo = criaFundoDeInvestimento(tipoDoFundo);
-		return fundo.calculaRentabilidade(valor) * RENTABILIDADE_LIQUIDA;
+		FundoDeInvestimento fundoDeInvestimento = criaFundoDeInvestimento(tipoDoFundo);
+
+		return fundoDeInvestimento.calculaRentabilidade(valor) * RENTABILIDADE_LIQUIDA;
 	}
 
 	private FundoDeInvestimento criaFundoDeInvestimento(TipoDoFundo tipoDoFundo) {
@@ -32,6 +34,7 @@ public class FundoDeInvestimentoMediator {
 		} else {
 			return null;
 		}
+
 	}
 
 }

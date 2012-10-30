@@ -5,48 +5,46 @@ import java.util.Properties;
 
 public class TransacaoFactory {
 
-	private static TransacaoFactory INSTANCIA;
+	private static TransacaoFactory instancia = null;
 
 	private TransacaoFactory() {
-		// Construtor privado
+
 	}
 
 	public static TransacaoFactory get() {
-
-		if (INSTANCIA == null) {
-			INSTANCIA = new TransacaoFactory();
+		if (instancia == null) {
+			instancia = new TransacaoFactory();
 		}
-		return INSTANCIA;
+		return instancia;
 	}
 
 	public AbstractTransacaoMediator cria(Transacao transacao) {
-
 		AbstractTransacaoMediator mediator = null;
 		Properties properties = new Properties();
-
 		try {
 			properties.load(this.getClass().getResourceAsStream(
 					"TipoDaTransacao.properties"));
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-
-		String tipoDaTransacao = transacao.getTipoDaTransacao().getChave()
-				.toString();
-
-		String classeConcreta = properties.getProperty(tipoDaTransacao);
-
-		try {
+			String tipoDaTransacao = transacao.getTipoDaTransacao().getChave()
+					.toString();
+			String classeConcreta = properties.getProperty(tipoDaTransacao);
 			mediator = (AbstractTransacaoMediator) Class
 					.forName(classeConcreta).newInstance();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
+		catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return mediator;
 	}
+
 }
